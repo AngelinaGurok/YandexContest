@@ -8,5 +8,7 @@ public class Rocks {
         this.m = m;
     }
 
-    
+    public static boolean winOrLose(int n, int m){
+        return true;
+    }
 }
