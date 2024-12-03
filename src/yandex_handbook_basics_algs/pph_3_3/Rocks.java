@@ -9,6 +9,9 @@ public class Rocks {
     }
 
     public static boolean winOrLose(int n, int m){
+        if(n % 2 == 0 && n % 2 == 0){
+            return false;
+        }
         return true;
     }
 }

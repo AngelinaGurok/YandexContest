@@ -11,10 +11,26 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        String[] numbers = in.nextLine().split(" ");
+        int n = Integer.parseInt(numbers[0]);
+        int m = Integer.parseInt(numbers[1]);
+        if(n % 2 == 0 && m % 2 == 0){
+            System.out.println("Lose");
+        } else System.out.println("Win");
+    }
+}
+
+p/*ublic class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
         int amountOfClients = in.nextInt();
         ArrayList<Main.Time> clients = new ArrayList<>(amountOfClients);
         int beginning = 1;
         int end = 2;
+
+        String[] numbers = in.nextLine().split(" ");
+
+
         for(int i = 0; i < amountOfClients; i++){
             beginning = in.nextInt();
             end = in.nextInt();
@@ -79,3 +95,4 @@ public class Main {
 }
 
 
+*/
