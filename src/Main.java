@@ -2,6 +2,8 @@ import yandex_handbook_basics_algs.pph_3_1.Factorial;
 //import yandex_handbook_basics_algs.pph_3_2.ReservationMeetingRoom;
 import yandex_handbook_basics_algs.pph_3_2.ReservationMeetingRoom;
 import yandex_handbook_basics_algs.pph_3_2.Time;
+import yandex_handbook_basics_algs.pph_3_3.Rocks;
+import yandex_handbook_basics_algs.pph_3_3.RocksStatisticTable;
 //import yandex_handbook_basics_algs.pph_3_1.Premutations;
 
 import java.util.ArrayList;
@@ -14,13 +16,27 @@ public class Main {
         String[] numbers = in.nextLine().split(" ");
         int n = Integer.parseInt(numbers[0]);
         int m = Integer.parseInt(numbers[1]);
-        if(n % 2 == 0 && m % 2 == 0){
-            System.out.println("Lose");
-        } else System.out.println("Win");
+        RocksStatisticTable statisticTable = new RocksStatisticTable();
+        statisticTable.fulfillTheRest(n, m);
+        if(Rocks.winOrLoseNewRules(n, m, statisticTable.getWinLoseStat())){
+            System.out.println("Win");
+        } else System.out.println("Lose");
+        Runtime runtime = Runtime.getRuntime();
+
+// Объём памяти, доступный JVM в данное время
+        long totalMemory = runtime.totalMemory();
+
+// Количество памяти JVM, свободное от занятых объектами
+        long freeMemory = runtime.freeMemory();
+
+// Объём памяти, которую занимают ваши объекты
+        long usedMemory = totalMemory - freeMemory;
+
+        System.out.printf("Используемая память: %d байт\n", usedMemory);
     }
 }
 
-p/*ublic class Main {
+/* public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int amountOfClients = in.nextInt();
