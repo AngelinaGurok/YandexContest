@@ -14,10 +14,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String[] numbers = in.nextLine().split(" ");
-        int n = Integer.parseInt(numbers[0]);
-        int m = Integer.parseInt(numbers[1]);
+        int n = Integer.parseInt(numbers[0]) % 3;
+        int m = Integer.parseInt(numbers[1]) % 3;
         RocksStatisticTable statisticTable = new RocksStatisticTable();
-        statisticTable.fulfillTheRest(n, m);
+
         if(Rocks.winOrLoseNewRules(n, m, statisticTable.getWinLoseStat())){
             System.out.println("Win");
         } else System.out.println("Lose");
