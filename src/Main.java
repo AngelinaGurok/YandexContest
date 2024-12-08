@@ -21,18 +21,6 @@ public class Main {
         if(Rocks.winOrLoseNewRules(n, m, statisticTable.getWinLoseStat())){
             System.out.println("Win");
         } else System.out.println("Lose");
-        Runtime runtime = Runtime.getRuntime();
-
-// Объём памяти, доступный JVM в данное время
-        long totalMemory = runtime.totalMemory();
-
-// Количество памяти JVM, свободное от занятых объектами
-        long freeMemory = runtime.freeMemory();
-
-// Объём памяти, которую занимают ваши объекты
-        long usedMemory = totalMemory - freeMemory;
-
-        System.out.printf("Используемая память: %d байт\n", usedMemory);
     }
 }
 
